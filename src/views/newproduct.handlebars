@@ -1,0 +1,39 @@
+<section class="products">
+  <h1>Products</h1>
+  <article>
+    <form class="create_form" enctype="multipart/form-data">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" />
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <textarea type="text" name="description"></textarea>
+      </div>
+      <div>
+        <label for="code">Code</label>
+        <input type="text" name="code" />
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input type="text" name="price" />
+      </div>
+      <div>
+        <label for="stock">Stock</label>
+        <input type="text" name="stock" />
+      </div>
+      <div>
+        <label for="category">Category</label>
+        <input type="text" name="category" />
+      </div>
+      <div>
+        <label for="thumbnails">Images</label>
+        <input type="file" name="thumbnails" multiple />
+      </div>
+      <input type="submit" value="Send">
+    </form>
+  </article>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/addProduct.js"></script>

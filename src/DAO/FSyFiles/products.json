@@ -1,0 +1,333 @@
+[
+  {
+    "_id": "645ad02532d3d81586ef695c",
+    "title": "Remera Clasica Est Hombre",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 7299,
+    "thumbnails": [
+      "1.jpg",
+      "2.jpg"
+    ],
+    "code": "CRH01",
+    "stock": 25,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad02532d3d81586ef695c"
+  },
+  {
+    "_id": "645ad02a32d3d81586ef6960",
+    "title": "Remera Clasica Estampada Hombre",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 7399,
+    "thumbnails": [
+      "3.jpg"
+    ],
+    "code": "CRH02",
+    "stock": 0,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad02a32d3d81586ef6960"
+  },
+  {
+    "_id": "645ad02d32d3d81586ef6964",
+    "title": "Remera Clasica Est Hombre",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 7299,
+    "thumbnails": [
+      "5.jpg",
+      "6.jpg"
+    ],
+    "code": "CRH04",
+    "stock": 23,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad02d32d3d81586ef6964"
+  },
+  {
+    "_id": "645ad03732d3d81586ef6968",
+    "title": "Remera Clasica Est Hombre 2da",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 5000,
+    "thumbnails": [
+      "4.jpg"
+    ],
+    "code": "CRH03",
+    "stock": 25,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad03732d3d81586ef6968"
+  },
+  {
+    "_id": "645ad03b32d3d81586ef696c",
+    "title": "Remera SF c/texto Hombre",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 7599,
+    "thumbnails": [
+      "7.jpg"
+    ],
+    "code": "CRH05",
+    "stock": 24,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad03b32d3d81586ef696c"
+  },
+  {
+    "_id": "645ad03e32d3d81586ef6970",
+    "title": "Remera Clasica Est Grande Hombre",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 7299,
+    "thumbnails": [
+      "8.jpg",
+      "9.jpg"
+    ],
+    "code": "CRH06",
+    "stock": 24,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad03e32d3d81586ef6970"
+  },
+  {
+    "_id": "645ad04032d3d81586ef6974",
+    "title": "Remera Flame Estampada",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 7199,
+    "thumbnails": [
+      "10.jpg"
+    ],
+    "code": "CRH07",
+    "stock": 25,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad04032d3d81586ef6974"
+  },
+  {
+    "_id": "645ad04232d3d81586ef6978",
+    "title": "Remera Est Frent / Esp ",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 6599,
+    "thumbnails": [
+      "11.jpg"
+    ],
+    "code": "CRH08",
+    "stock": 25,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad04232d3d81586ef6978"
+  },
+  {
+    "_id": "645ad04432d3d81586ef697c",
+    "title": "Campera Liviana ",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 10999,
+    "thumbnails": [
+      "12.jpg"
+    ],
+    "code": "CRH09",
+    "stock": 25,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad04432d3d81586ef697c"
+  },
+  {
+    "_id": "645ad04632d3d81586ef6980",
+    "title": "Remera Lisa Con Puño",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 5399,
+    "thumbnails": [
+      "13.jpg"
+    ],
+    "code": "CRH10",
+    "stock": 25,
+    "category": "remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad04632d3d81586ef6980"
+  },
+  {
+    "_id": "645ad04832d3d81586ef6984",
+    "title": "Remera Calada",
+    "description": "remera calada marca tupper",
+    "price": 2400,
+    "thumbnails": [
+      "14.jpg"
+    ],
+    "code": "CRH444",
+    "stock": 8,
+    "category": "Remeras",
+    "status": true,
+    "__v": 0,
+    "id": "645ad04832d3d81586ef6984"
+  },
+  {
+    "_id": "645ad2a45f278e8267d0251b",
+    "title": "Sweter",
+    "description": "Comodo sweter para el otoño, convinable con cualquier prenda. ",
+    "price": 23445,
+    "thumbnails": [
+      "sweter.jpg"
+    ],
+    "code": "CRH44",
+    "stock": 32,
+    "category": "Abrigo",
+    "status": true,
+    "__v": 0,
+    "id": "645ad2a45f278e8267d0251b"
+  },
+  {
+    "_id": "64616d730cccc6858fe3d6a9",
+    "title": "Zapatillas Asics",
+    "description": "Las mejores zapatillas del mercado, tus pies van a sentir la suavidad en cada paso.",
+    "price": 30000,
+    "thumbnails": [
+      "Zapatillas-1.jpg"
+    ],
+    "code": "ZP001",
+    "stock": 13,
+    "category": "Calzado",
+    "status": true,
+    "__v": 0,
+    "id": "64616d730cccc6858fe3d6a9"
+  },
+  {
+    "_id": "64616dd80cccc6858fe3d6b4",
+    "title": "Zapatilla Asics Radioactive",
+    "description": "Con este nuevo modelo, vas a tener un brillo nuclear en tu andar. ",
+    "price": 25000,
+    "thumbnails": [
+      "Zapatillas-2.jpg"
+    ],
+    "code": "ZP002",
+    "stock": 14,
+    "category": "Calzado",
+    "status": true,
+    "__v": 0,
+    "id": "64616dd80cccc6858fe3d6b4"
+  },
+  {
+    "_id": "64616e690cccc6858fe3d6bf",
+    "title": "Zapatillas Asics Classics",
+    "description": "Modelo clasico de estas impresionantes zapatillas, siempre el mayor confort brindado desde la sencillez.",
+    "price": 23000,
+    "thumbnails": [
+      "Zapatillas-3.jpg"
+    ],
+    "code": "ZP003",
+    "stock": 16,
+    "category": "Calzado",
+    "status": true,
+    "__v": 0,
+    "id": "64616e690cccc6858fe3d6bf"
+  },
+  {
+    "_id": "6461703c94088e02afb8e7a8",
+    "title": "Pantalo de lona",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 12999,
+    "thumbnails": [
+      "pantalon-1.png"
+    ],
+    "code": "PTL001",
+    "stock": 25,
+    "category": "Pantalones",
+    "status": true,
+    "__v": 0,
+    "id": "6461703c94088e02afb8e7a8"
+  },
+  {
+    "_id": "6461705c94088e02afb8e7ad",
+    "title": "Pantalo de tela",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 17999,
+    "thumbnails": [
+      "pantalon-2.png"
+    ],
+    "code": "PTL002",
+    "stock": 15,
+    "category": "Pantalones",
+    "status": true,
+    "__v": 0,
+    "id": "6461705c94088e02afb8e7ad"
+  },
+  {
+    "_id": "6461707c94088e02afb8e7b2",
+    "title": "Pantalo de jean",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vel nulla culpa voluptatem quasi provident qui laborum omnis molestias fuga voluptatibus error cupiditate, et architecto nemo quod rerum dolorum nihil.",
+    "price": 22999,
+    "thumbnails": [
+      "pantalon-3.png"
+    ],
+    "code": "PTL003",
+    "stock": 20,
+    "category": "Pantalones",
+    "status": true,
+    "__v": 0,
+    "id": "6461707c94088e02afb8e7b2"
+  },
+  {
+    "_id": "648631fe21072649f97cb5b1",
+    "title": "Pantalo de lona negro",
+    "description": "Pantalon de lona negro para hombre. Gran variedad de talles.",
+    "price": 30000,
+    "thumbnails": [
+      "pantalon-de-hombre-nanoshell-pro.jpg"
+    ],
+    "code": "PTL004",
+    "stock": 13,
+    "category": "Pantalones",
+    "status": true,
+    "__v": 0,
+    "id": "648631fe21072649f97cb5b1"
+  },
+  {
+    "_id": "64986274590caf5f73720e5f",
+    "title": "Mochila",
+    "description": "Mochila negra para viajes o para tu dia a dia",
+    "price": 15000,
+    "thumbnails": [
+      "Mochila.webp"
+    ],
+    "code": "MC001",
+    "stock": 13,
+    "category": "Mochilas",
+    "status": true,
+    "__v": 0,
+    "id": "64986274590caf5f73720e5f"
+  },
+  {
+    "_id": "64a1db23c5c39a313bb3a008",
+    "title": "Mochila 2",
+    "description": "Mochila de cuero clasica",
+    "price": 35000,
+    "thumbnails": [
+      "Mochila2.webp"
+    ],
+    "code": "MC002",
+    "stock": 12,
+    "category": "Mochilas",
+    "status": true,
+    "__v": 0,
+    "id": "64a1db23c5c39a313bb3a008"
+  },
+  {
+    "_id": "d639b4aa-3b9b-4b61-b57f-2fb3457eebe4",
+    "status": true,
+    "title": "Remera Polo",
+    "description": "Remera Polo",
+    "price": "20000",
+    "thumbnails": [
+      "polo-label-0132-5791221-4-product.webp"
+    ],
+    "code": "REMEPOLO",
+    "stock": "2",
+    "category": "Remeras"
+  }
+]

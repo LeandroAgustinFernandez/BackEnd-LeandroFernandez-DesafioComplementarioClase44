@@ -1,0 +1,17 @@
+<main>
+  <h1>General Chat</h1>
+  <div class="info">
+    <p>User: <span class="username"> {{user.first_name}} {{user.last_name}}</span></p>
+    <p hidden id="user_id">{{user._id}}</p>
+    <label for="">Backgroud
+      <select class="background">
+        <option value="whatsapp" selected="selected">Whatsapp</option>
+        <option value="tictactoe">TicTacToe</option>
+        <option value="lotoflower">Loto Flower</option>
+      </select></label>
+  </div>
+  <div id="message_logs"></div>
+  <input type="text" id="chat_box" placeholder="Write a message..." />
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>

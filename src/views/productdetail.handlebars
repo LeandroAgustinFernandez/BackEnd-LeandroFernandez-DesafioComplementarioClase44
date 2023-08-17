@@ -1,0 +1,27 @@
+<section class="detail_container">
+        <p class="cart-id" hidden>{{cart._id}}</p>
+  <article class="detail">
+    {{#if error}}
+      <p class="message">La pagina solicitada no existe.</p>
+      <a href="/products" class="btn-primary">Regresar</a>
+    {{else}}
+      <h1>{{product.title}}</h1>
+      <p>Category: {{product.category}}</p>
+      <img
+        src="/images/products/{{product.thumbnails.[0]}}"
+        alt="{{product.title}}"
+        min-width="300px"
+        width="600px"
+      />
+      <p>{{product.description}}</p>
+      <p>Price: {{product.price}}</p>
+      <p>Stock: {{product.stock}}</p>
+      <div style="margin-top: 2rem;">
+        <button data-id="{{product._id}}" class="btn-primary addtocart">Add to cart</button>
+      </div>
+    {{/if}}
+  </article>
+</section>
+
+<script src="/js/helpers.js"></script>
+<script src="/js/detail.js"></script>

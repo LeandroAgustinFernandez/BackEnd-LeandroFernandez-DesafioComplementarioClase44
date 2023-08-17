@@ -1,0 +1,16 @@
+<section class="cart_container">
+  <h1>Cart</h1>
+  <h3 style="margin-bottom: 2rem">Products</h3>
+  {{#if display}}
+    {{#each products}}
+    <div>
+      <p>{{this.product.title}}</p>
+      <span>${{this.product.price}} x {{this.quantity}} Unidades</span>
+    </div>
+    {{/each}}
+  {{else}}
+    <div>
+      <h3>Aun no hay productos en el carrito.</h3>
+    </div>
+  {{/if}}
+</section>

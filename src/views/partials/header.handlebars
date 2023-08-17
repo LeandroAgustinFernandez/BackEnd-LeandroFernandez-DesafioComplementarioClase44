@@ -1,0 +1,19 @@
+<header>
+  <nav>
+    <ul class="nav">
+      {{#if logued}}
+        <li><a class="link-item" href="/products">Products</a></li>
+        <li><a class="link-item" href="/carts">Cart</a></li>
+        {{#if role}}
+          <li><a class="link-item" href="/newproduct">New Product</a></li>
+        {{else}}
+          <li><a class="link-item" href="/chat">Chat</a></li>
+        {{/if}}
+        <li><a class="link-item" href="/perfil">Perfil</a></li>
+      {{else}}
+        <li><a class="link-item" href="/login">Login</a></li>
+        <li><a class="link-item" href="/register">Register</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message{
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.form_search {
+    margin-bottom: 1rem;
+}
+
+.form_select{
+    border-radius: 0;
+    border: 1px solid #333;
+    padding: 10px 15px;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #eee;
+    font-weight: bold;
+    background-color: rgb(44, 44, 131);
+    padding: 10px 15px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #EEE;
+    margin-bottom: 2rem;
+}
+
+.products_list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.products h1 {
+    margin: 1rem 0;
+    color: #333;
+}
+
+.product {
+    max-width: 400px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product .btn_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product .delete_btn {
+    order: 2;
+    border: none;
+    padding: 10px 15px;
+    background-color: rgb(172, 22, 22);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.product .addcart_btn {
+    order: 1;
+    border: none;
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product p {
+    margin: .5rem;
+}
+
+.product p:nth-of-type(1){
+    flex: 1;
+}
+
+.create_form {
+    width: 500px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.create_form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem;
+}
+
+.create_form div input,
+.create_form div textarea {
+    width: 300px;
+    padding: 5px;
+}
+
+.create_form input[type="submit"] {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: green;
+    color: #EEE;
+    border: none;
+    cursor: pointer;
+    margin: .5rem;
+}
+
+.create_form input[type="submit"]:hover {
+    background-color: rgb(10, 197, 10);
+}
+
+.pagination {
+    margin: 2rem 0;
+}
+
+.prev_button {
+    margin: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.next_button {
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.actual_page {
+    margin: 0;
+    padding: 9px 15px;
+    border: 1px solid rgb(44, 44, 131);
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail_container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.detail_container .detail {
+    background-color: #fff;
+    border: #eee 1px solid;
+    padding: 2rem;
+    text-align: center;
+    max-width: 700px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+.cart_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cart_container h1 {
+    margin: 1rem 0;
+}
+
+.cart_container p {
+    margin: .3rem 0;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.user_form{
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    width: 360px;
+    font-weight: bold;
+}
+
+.user_form input {
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
+    padding: 10px 5px;
+}
+
+.user_form button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.perfil-container{
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-container h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.perfil-container .user_info {
+   padding: 2rem 1rem;
+   background-color: #fff;
+   font-weight: bold;
+}
+
+.perfil-container button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+

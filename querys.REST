@@ -1,0 +1,31 @@
+GET http://localhost:8080/api/products/mocking-products
+
+### 
+POST http://localhost:8080/api/products/
+Content-Type: application/json
+
+{
+   "status": true,
+    "title": "",
+    "description": "Remera Polo",
+    "price": "",
+    "thumbnails": [],
+    "code": "REMEPOLO3",
+    "stock": "2",
+    "category": "Remeras"
+}
+
+### 
+POST http://localhost:8080/api/products/
+Content-Type: application/json
+
+{
+    "status": true,
+    "title": "Remera Polo",
+    "description": "Remera Polo",
+    "price": "20000",
+    "thumbnails": [],
+    "code": "REMEPOLO3",
+    "stock": "2",
+    "category": "Remeras"
+}

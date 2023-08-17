@@ -1,0 +1,22 @@
+<section class="form-container">
+  <article>
+    <h1>Login</h1>
+    <form method="POST"  class="user_form" action="" id="login">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" autocomplete="off"/>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" autocomplete="new-password"/>
+      </div>
+      <button class="btn-primary">Sign in</button>
+      {{!-- <a href="api/session/github" class="btn-primary" style="display:block; margin: .5rem 0;">Sign in with Github</a> --}}
+      </div>
+      <p>New user? <a href="/register">Create an account</a></p>
+      <p>Forgot your password? <a href="/recoverpassword">Recover Password</a></p>
+    </form>
+  </article>
+</section>
+
+<script src="/js/user.js"></script>

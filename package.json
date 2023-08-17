@@ -1,0 +1,48 @@
+{
+  "name": "fernandezleandro-clase06",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=mongo&& nodemon src/app.js ",
+    "mongo": "set NODE_ENV=mongo&& nodemon src/app.js ",
+    "files": "set NODE_ENV=files&& nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "async-express-decorator": "^1.1.0",
+    "bcrypt": "^5.1.0",
+    "commander": "^10.0.1",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.0",
+    "mongoose-paginate-v2": "^1.7.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.4",
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.5.0",
+    "socket.io": "^4.6.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}

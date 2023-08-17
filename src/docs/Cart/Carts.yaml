@@ -1,0 +1,262 @@
+paths:
+  /api/carts/:
+    post:
+      summary: Crea un nuevo carrito.
+      tags:
+        - Carts
+      responses:
+        "200":
+          description: El carrito se creo correctamente
+        "401":
+          description: Usuario no autorizado.
+        "500":
+          description: No se pudo creer el carrito.
+
+  /api/carts/{cid}:
+    get:
+      summary: Obtiene un carrito con sus productos.
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito que desea consultar.
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: El carrito se obtuvo correctamente.
+          content:
+            aplications/json:
+              schema:
+                type: Array
+                items:
+                  $ref: '#/components/schemas/Cart'
+        "401":
+            description: Usuario no autorizado.  
+        "500":
+          description: No se pudo obtener el carrito
+          
+    put:
+      summary: Se reemplanzan los productos existentes en el carrito por los enviados en el cuerpo de la petición.
+      tags:
+      - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: Id del carrito que desea modificar.
+        schema:
+          $type: String
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/uploadCart'
+      responses: 
+        "200":
+          description: El carrito se modifico correctamente.
+        "401":
+          description: Usuario no autorizado.
+        "500":
+          description: Hubo un error al modificar el carrito.
+
+    delete:
+      summary: Se elimina el carrito seleccionado.
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito que desea eliminar
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: El carrito se elimino correctamente
+        "401":
+          description: Usuario no autorizado.
+        "500":
+          description: No se pudo eliminar el carrito
+
+  /api/carts/{cid}/product/{pid}:
+    post:
+      summary: Agrega un producto al carrito
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito.
+          schema:
+            $type: String
+        - name: pid
+          in: path
+          required: true
+          description: Id del producto
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: El producto se agrego al carrito correctamente
+        "401":
+          description: Usuario no autorizado.
+        "403":
+          description: No tiene permisos para realizar la acción.
+        "500":
+          description: No se pudo agregar el producto al carrito
+
+    put:
+      summary: Actualiza un producto del carrito.
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito.
+          schema:
+            $type: String
+        - name: pid
+          in: path
+          required: true
+          description: Id del producto.
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: El producto del carrito se actualizo correctamente.
+        "401":
+          description: Usuario no autorizado.
+        "500":
+          description: No se pudo actualizar el producto del carrito.
+
+    delete:
+      summary: Elimina un producto del carrito.
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito.
+          schema:
+            $type: String
+        - name: pid
+          in: path
+          required: true
+          description: Id del producto.
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: El producto del carrito se elimino correctamente.
+        "401":
+          description: Usuario no autorizado.
+        "500":
+          description: No se pudo eliminar el producto del carrito.
+
+  /api/carts/{cid}/purchase:
+    get:
+      summary: Se genera y recibe un ticket de la compra.
+      tags:
+      - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: Id del carrito.
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: La compra se proceso de manera exitosa.
+          content:
+            aplications/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ticket'
+        "401":
+          description: Usuario no autorizado.
+        "500":
+          description: Error al finalizar la compra.
+
+components:
+  schemas:
+    Cart:
+      type: Object
+      properties:
+        _id:
+          type: String
+          description: Id autogenerado por Mongo.
+        products:
+          type: Array
+          items:
+            type: Object
+            properties:
+              pid:
+                type: String
+                description: ObjectId del producto
+              quantity:
+                type: Number
+                description: Cantidad del producto
+        description: Lista de productos en el carrito
+      example:
+        _id: ObjectId("asETDFG1234jnuhg8fd.214asFSDE3")
+        products:
+          - pid: ObjectId("64010a6571f4e310587dbb00")
+            quantity: 5
+          - pid: ObjectId("645ad03732d3d81586ef6968")
+            quantity: 1
+          - pid: ObjectId("645ad04032d3d81586ef6974")
+            quantity: 1
+
+    Ticket:
+      type: Object
+      properties:
+        _id:
+          type: String
+          description: Id autogenerado por Mongo.
+        code:
+          type: String
+          description: Codigo de la compra.
+        purchase_datetime:
+          type: Date
+          description: Fecha de la compra.
+        amount:
+          type: Number
+          description: Precio total de la compra.
+        purchaser:
+          type: String
+          description: Email del cliente.
+      example:
+        _id: ObjectId("asETDFG1234jnuhg8fd.214asFSDE3")
+        code: "cea7c7c7-e29d-4677-9e69-8f03929f789e"
+        purchase_datetime: 2023-07-03T23:52:06.370+00:00
+        amount: 36995
+        purchaser: correo_usuario@gmail.com
+
+  requestBodies:
+    uploadCart:
+      type: Array
+      items:
+        type: object
+        properties:
+          pid:
+            type: String
+            description: id Del producto.
+          quantity:
+            type: Number
+            description: Cantidad del producto.
+      example:
+        - pid: ObjectId("64010a6571f4e310587dbb00")
+          quantity: 5
+        - pid: ObjectId("645ad03732d3d81586ef6968")
+          quantity: 1
+        - pid: ObjectId("645ad04032d3d81586ef6974")
+          quantity: 1
