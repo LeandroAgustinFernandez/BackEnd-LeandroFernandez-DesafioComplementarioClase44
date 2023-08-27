@@ -30,7 +30,7 @@ class ViewRouterClass extends RouterClass {
     this.get("/product/:pid", passportCall("jwt"), authorizationRole(["user", "admin","premium"]), productDetailView);
     this.get("/newproduct", passportCall("jwt"), authorizationRole(["admin","premium"]), newProductView);
     this.get("/carts", passportCall("jwt"), authorizationRole(["user", "admin","premium"]), cartView);
-    this.get("/logout", logoutView);
+    this.get("/logout", passportCall("jwt"), logoutView);
     this.get("/chat", passportCall("jwt"), authorizationRole(["user","premium"]), chatView);
   }
 }

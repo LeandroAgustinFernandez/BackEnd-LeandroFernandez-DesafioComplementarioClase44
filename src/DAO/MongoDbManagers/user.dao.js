@@ -13,8 +13,19 @@ export default class UserManagerDB {
   async get(email) {
     try {
       let user = await userModel.findOne({ email }, { __v: 0 }).lean();
-      
+
       if (!user) throw new Error(`User not exists.`);
+      return user;
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  async getById(uid) {
+    try {
+      let user = await userModel.findOne({ _id: uid}, { __v: 0 }).lean();
+      if (!user) throw new Error(`User not exists.`);
+      
       return user;
     } catch (error) {
       return { error: error.message };
@@ -27,13 +38,15 @@ export default class UserManagerDB {
       if (user?.error) throw new Error(user.error);
       let result = await userModel.updateOne(
         { email },
-        { $set: { password: newpassword, recover_password: 
-          {
-            id_url: null,
-            createTime: null
-          } 
-        } 
-      }
+        {
+          $set: {
+            password: newpassword,
+            recover_password: {
+              id_url: null,
+              createTime: null,
+            },
+          },
+        }
       );
       return result;
     } catch (error) {
@@ -41,7 +54,7 @@ export default class UserManagerDB {
     }
   }
 
-  async recoverPassword(user){
+  async recoverPassword(user) {
     try {
       let result = await userModel.updateOne(
         { email: user.email },
@@ -53,16 +66,17 @@ export default class UserManagerDB {
     }
   }
 
-  async resetRecoverPassword(email){
+  async resetRecoverPassword(email) {
     try {
       let result = await userModel.updateOne(
         { email },
-        { $set: { recover_password: 
-            {
+        {
+          $set: {
+            recover_password: {
               id_url: null,
-              createTime: null
-            } 
-          } 
+              createTime: null,
+            },
+          },
         }
       );
       return result;
@@ -71,11 +85,13 @@ export default class UserManagerDB {
     }
   }
 
-  async checkResetUrl(idurl) { 
-    try{ 
-      let result = await userModel.findOne({"recover_password.id_url":idurl}).lean();
+  async checkResetUrl(idurl) {
+    try {
+      let result = await userModel
+        .findOne({ "recover_password.id_url": idurl })
+        .lean();
       return result;
-    }catch (error){
+    } catch (error) {
       return { error: error.message };
     }
   }
@@ -84,10 +100,36 @@ export default class UserManagerDB {
     try {
       let user = await userModel.findOne({ _id: uid }, { __v: 0 }).lean();
       if (!user) throw new Error(`User not exists.`);
-      let newRole = (user.role === "user") ? "premium" : "user";
+      let newRole = user.role === "user" ? "premium" : "user";
       let result = await userModel.updateOne(
         { _id: uid },
-        { $set: { role: newRole }}
+        { $set: { role: newRole } }
+      );
+      return result;
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  async setLastConnection(uid) {
+    try {
+      let result = await userModel.updateOne(
+        { _id: uid },
+        { $set: { last_connection: new Date().toISOString() } }
+      );
+      return result;
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  async uploadDocuments(uid, documents) {
+    try {
+      let user = await userModel.findOne({ _id: uid }, { __v: 0 }).lean();
+      if (!user) throw new Error(`User not exists.`);
+      let result = await userModel.updateOne(
+        { _id: uid },
+        { $set: { documents } }
       );
       return result;
     } catch (error) {

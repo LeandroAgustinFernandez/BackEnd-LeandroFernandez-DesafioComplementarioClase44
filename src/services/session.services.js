@@ -9,4 +9,7 @@ export default class SessionServices {
   checkResetUrl = async (idurl) => await USER_REPOSITORY.checkResetUrl(idurl)
   resetRecoverPassword = async (email) => await USER_REPOSITORY.resetRecoverPassword(email)
   changeRole = async (uid) => await USER_REPOSITORY.changeRole(uid)
+  setLastConnection = async (uid) => await USER_REPOSITORY.setLastConnection(uid)
+  uploadDocuments = async (uid, documents) => await USER_REPOSITORY.uploadDocuments(uid, documents)
+  getUserById = async (uid) => await USER_REPOSITORY.getUserById(uid)
 }

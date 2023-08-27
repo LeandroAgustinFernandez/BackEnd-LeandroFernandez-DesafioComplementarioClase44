@@ -16,7 +16,16 @@ const userSchema = new Schema({
   recover_password: {
     id_url: {type: String},
     createTime: {type: String}
-  }
+  },
+  documents: {
+    type: [
+      {
+        name: { type: String },
+        reference: { type: String }
+      }
+    ]
+  },
+  last_connection: { type: String }
 });
 
 userSchema.pre('findOne', function(){

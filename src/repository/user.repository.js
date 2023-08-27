@@ -19,7 +19,6 @@ export default class UserRepository {
   }
 
   async recoverPassword(user) {
-    // console.log('USER_REPOSITORY=>',user);
     return await this.DAO.recoverPassword(user)
   }
 
@@ -33,5 +32,17 @@ export default class UserRepository {
 
   async changeRole(uid) {
     return await this.DAO.changeRole(uid);
+  }
+
+  async setLastConnection(uid) {
+    return await this.DAO.setLastConnection(uid)
+  }
+
+  async uploadDocuments(uid, documents) {
+    return await this.DAO.uploadDocuments(uid, documents)
+  }
+
+  async getUserById(uid) {
+    return await this.DAO.getById(uid)
   }
 }

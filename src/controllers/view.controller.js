@@ -133,6 +133,8 @@ export const cartView = async (request, response) => {
 };
 
 export const logoutView = async (request, response) => {
+  const { user } = request.user;
+  await SESSION_SERVICES.setLastConnection(user._id)
   response.clearCookie("tokenBE").redirect("/login");
 };
 

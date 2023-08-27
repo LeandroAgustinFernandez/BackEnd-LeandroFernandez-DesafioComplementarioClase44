@@ -7,6 +7,9 @@ createForm.addEventListener("submit", async (e) => {
   let res = await fetch("/api/products", {
     method: "POST",
     body: product,
+    headers: {
+      type: 'products'
+    }
   });
   let message = await res.json();
   if (message?.success) {
