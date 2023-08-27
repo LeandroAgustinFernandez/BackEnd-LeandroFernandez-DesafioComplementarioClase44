@@ -159,8 +159,8 @@ export const uploadDocuments = async (request, response) => {
       documents.push({ name: file.fieldname, reference: file.filename });
     });
     let result = await SESSION_SERVICES.uploadDocuments(uid, documents);
-    response.send(result);
+    response.send({status: 'success',payload: result});
   } catch (error) {
-    response.status(500).send("There was an error uploading the documents");
+    response.status(500).send({status: 'error', payload:"There was an error uploading the documents"});
   }
 };
